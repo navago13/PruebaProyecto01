@@ -1,0 +1,52 @@
+<html>
+    <boody>
+
+        {% include "BarraSuperior/barra.html" %}
+
+    <h2 style="color: blue;">
+    (h2) Hola esta es MI Primera Plantilla en la Pagina del curso de Django
+    </h2>
+    {# esto es un comentario en HTML d una line #}
+    {% comment %}asi se pueden escribir comentarios de varias lineas 
+       |barra vertical para aplicar filro eje | upper o cualquiera
+       para mayuscula y | first para mostrar la primera letra
+    
+    {% endcomment %}
+     {% if nombrepersona == " jose aristides" %} 
+     
+            <p>EL CURSO LO IMPARTE EL PROFESOR TITULAR</p>
+
+     {% else %}
+     
+            <p>EL CURSO LO IMPARTIRA EL SUPLENTE</p>
+
+     {% endif %}       
+    <p>EL NOMBRE DEL PROFESOR {{nombrepersona.upper}}</p>
+    <h1 style="color: deeppink;"> 
+    <p> (h1) upper METODO para hacer que coloque las letras en mayuscula</p>
+    </h1>
+    <p>SU APELLIDO ES {{apellidopersona.upper}}<p></p>
+    <p>La Prueba de Fecha {{horaActual.day}} / {{horaActual.month}} / {{horaActual.year}}<p></p>
+    <p><strong><h2 style="color: brown;"> (h2) Temas del curso :</h2></strong></p> 
+    <p>
+        <ul>
+        {%if Temas %}     
+            {% for variablelista in Temas %}
+                <h2 style="color: darkgoldenrod;"> 
+
+                   <li>  {{variablelista}} </li>
+                    
+                </h2>   
+
+            {% endfor %}
+
+        {% else %}
+            <p><h2 style="color: cyan;"> (h2) NO HAY NADA QUE MOSTRAR</h2> </p>    
+        {% endif %}
+        </ul>
+    </p>
+    <h3 style="color: rgb(241, 104, 104);"> 
+    <p> (h3) (ul) para encerrar una lista (li) es para tener una lista desordenada</p> 
+    </h3> 
+    </boody>
+    </html>

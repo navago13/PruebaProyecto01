@@ -1,0 +1,17 @@
+SUPERUSUARIO
+
+USERNAME  navago13
+
+PASSWORD 544josearistides
+
+para crear superusuario
+
+en consola y en el proyecto activo
+
+python manage.py createsuperuser
+
+luego se arranca el servidor de django desde la consola python manage.py runserver
+
+con la direccion 
+
+http://127.0.0.1:8000/admin/

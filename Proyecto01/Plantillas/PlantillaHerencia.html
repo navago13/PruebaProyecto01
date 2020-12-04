@@ -1,0 +1,24 @@
+<html>
+   <head>
+       <title>
+
+            {#Este es el contenido que cambia en las paginas#}
+            {% block title %}{% endblock %}  
+       </title>
+   </head>
+   <body>
+            <h1>  CUATRO PUNTO Y COMA  </h1>
+
+            {% include "BarraSuperior/barra.html" %}
+
+            <h3> Diseño y Construcción </h3>
+
+            {% block content %} 
+            {#Contenido cambiante#}
+            
+            {% endblock %}
+
+
+            <p>Pie de paginas</p>
+   </body>
+</html>
